@@ -1,0 +1,89 @@
+:root {
+	--main_padding: 150px;
+	--main_green: #26643b;
+	--main_green2: #a2de96;
+	--lightgreen1: #d6e5d8;
+	--lightgreen2: #f5fcf4;
+	--black1: #3b413a;
+	--black2: #3f3c3c;
+	--black3: #5b6359;
+	--white1: #e8e8e8;
+	--main_transition: 0.3s;
+}
+.formulaire {
+	padding-bottom: var(--main_padding);
+}
+.formulaire .container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.formulaire .container h4 {
+	font-size: 24px;
+	font-family: "Poppins", sans-serif;
+	color: var(--black1);
+	font-weight: 600;
+}
+.formulaire .container form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 2%;
+}
+
+.formulaire .container form .field {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 49%;
+	gap: 5px;
+	padding: 10px 0px;
+}
+@media (max-width: 768px) {
+	.formulaire .container form .field {
+		flex-basis: 100%;
+	}
+}
+.formulaire .container form .field:last-of-type {
+	flex-basis: 100%;
+}
+.formulaire .container form textarea {
+	resize: vertical;
+}
+.formulaire .container form .field input,
+textarea {
+	outline: none;
+	border: none;
+	background-color: var(--lightgreen1);
+	border-radius: 10px;
+}
+.formulaire .container form .field input , textarea{
+	height: 70px;
+	padding: 10px;
+	font-size: 1.3rem;
+	font-family: "Poppins", sans-serif;
+	color: var(--black2);
+	position: relative;
+	
+}
+.formulaire .container form .field input.valid {
+	border: green solid 2px;
+}
+.formulaire .container form .field input.failed {
+	border: red solid 2px;
+}
+.formulaire .container form .field label {
+	font-size: 20px;
+	font-family: "Poppins", sans-serif;
+	color: var(--black2);
+}
+.formulaire .container form input[type="submit"] {
+	padding: 15px 40px;
+	background-color: var(--main_green);
+	color: white;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.3rem;
+	font-weight: 500;
+	border-radius: 10px;
+	cursor: pointer;
+}
+/* !/(\w || \W){0,64}@\w{1,6}.\w{1,10}/.test(input[i].value.trim()) */
