@@ -28,6 +28,7 @@ a {
 
 body {
 	background-color: var(--lightgreen2);
+	overflow-x: hidden;
 }
 
 ul {
@@ -924,7 +925,7 @@ a.book {
 	flex-direction: column;
 	gap: 25px;
 }
-.footer .container .links{
+.footer .container .links {
 	min-width: 120px;
 }
 .footer .container .links h3,
